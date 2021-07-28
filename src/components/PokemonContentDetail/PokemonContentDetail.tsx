@@ -50,7 +50,8 @@ const PokemonContentDetail = (props: any) => {
             image: data.sprites.other["official-artwork"].front_default,
             information: [
               { name: "Abilities", value: abilities },
-              { name: "Types", value: types },
+              { name: "Type", value: types },
+              { name: "Order", value: data.order },
               { name: "Possible evolutions", value: searchTree(evolutions) },
               { name: "Moves", value: moves },
             ],
