@@ -1,6 +1,18 @@
 .App {
   text-align: center;
 }
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+
+.contentWrapper {
+  max-width: 640px;
+  margin: 0px auto 0px auto;
+}
 
 .App-logo {
   height: 40vmin;
