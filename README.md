@@ -1,6 +1,6 @@
 # Pokemonindex
 
-This project represents an Index for all available Pokemons.
+This project represents an index for all available Pokemons.
 
 ## API utilized
 
