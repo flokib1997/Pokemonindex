@@ -18,9 +18,9 @@ import { useStyles } from "./PokemonContentHome.style";
 const PokemonContentHome = () => {
   const classes = useStyles();
 
-  let [pokemons, setPokemons] = useState<IPokemon[]>([]);
-  let [page, setPage] = useState<number>(1);
-  let [pageCount, setPageCount] = useState<number>(0);
+  const [pokemons, setPokemons] = useState<IPokemon[]>([]);
+  const [page, setPage] = useState<number>(1);
+  const [pageCount, setPageCount] = useState<number>(0);
 
   useEffect(() => {
     getAllPokemon(page).then((data) => {

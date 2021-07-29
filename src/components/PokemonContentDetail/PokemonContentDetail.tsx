@@ -26,10 +26,10 @@ import { IPokemonEvolution } from "../../interfaces/PokemonEvolutionInterface";
 const PokemonContentDetail = (props: any) => {
   const classes = useStyles();
 
-  let [pokemon, setPokemon] = useState<IPokemonDetail>();
-  let [isLoading, setIsLoading] = useState<boolean>(true);
+  const [pokemon, setPokemon] = useState<IPokemonDetail>();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  let { name }: any = useParams();
+  const { name }: any = useParams();
 
   useEffect(() => {
     getPokemonByName(name)

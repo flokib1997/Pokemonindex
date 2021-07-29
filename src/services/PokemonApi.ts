@@ -5,13 +5,13 @@ export function getAllPokemon(page: number): Promise<any> {
     .get("https://pokeapi.co/api/v2/pokemon?limit=13&offset=" + (page - 1) * 13)
     .then((data) => {
       let allPokemon: IPokemon[] = [];
-      let { results } = data.data;
+      const { results } = data.data;
 
-      let output: IPokemon[] = results.map(function (el: IPokemon) {
-        let output: IPokemon = {
+      const output: IPokemon[] = results.map(function (el: IPokemon) {
+        const out: IPokemon = {
           name: el.name,
         };
-        return output;
+        return out;
       });
       allPokemon = [...output];
 
@@ -26,12 +26,12 @@ export function getAllPokemon(page: number): Promise<any> {
 export function getPokemonByName(name: string): Promise<any> {
   return axios
     .get("https://pokeapi.co/api/v2/pokemon/" + name)
-    .then((data) => data.data);
+    .then((data: any) => data.data);
 }
 
 export function getEvolutionsBySpecies(speciesUrl: string): Promise<any> {
   return axios.get(speciesUrl).then((res: any) => {
-    return axios.get(res.data.evolution_chain.url).then((dat) => {
+    return axios.get(res.data.evolution_chain.url).then((dat: any) => {
       return dat;
     });
   });
