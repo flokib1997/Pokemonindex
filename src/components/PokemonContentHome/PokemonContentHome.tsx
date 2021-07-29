@@ -45,12 +45,7 @@ const PokemonContentHome = () => {
         <Card
           className={`${classes.cardContainer} ${classes.headingContainer}`}
         >
-          <Typography
-            align="left"
-            data-testid="homeHeading"
-            variant="h4"
-            component="h1"
-          >
+          <Typography align="left" variant="h4" component="h1">
             Overview
           </Typography>
         </Card>
