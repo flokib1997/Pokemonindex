@@ -6,9 +6,9 @@ This project represents an index for all available Pokemon.
 
 This project was build with React.
 
-Styling: Material UI
-Testing: React Testing Library
-API communication: Axios
+Styling: Material UI\
+Testing: React Testing Library\
+API communication: Axios\
 
 ## API utilized
 
