@@ -39,7 +39,6 @@ const PokemonContentDetail = (props: any) => {
           .join(", ");
         const types = data.types.map((el: any) => el.type.name).join(", ");
         const moves = data.moves.map((el: any) => el.move.name).join(", ");
-        const forms = data.forms.map((el: any) => el.name).join(", ");
         const stats = data.stats.map((el: any) => {
           return { name: el.stat.name, value: el.base_stat };
         });

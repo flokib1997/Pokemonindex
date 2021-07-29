@@ -25,5 +25,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       backgroundColor: "#f2f2f2",
     },
+    headingContainer: {
+      margin: theme.spacing(2, 2, 0, 2),
+      padding: theme.spacing(1),
+    },
   })
 );

@@ -19,6 +19,7 @@ const PokemonHeader = () => {
             color="primary"
             aria-label="menu"
             href="/"
+            data-testid="homeButton"
           >
             <HomeIcon />
           </IconButton>

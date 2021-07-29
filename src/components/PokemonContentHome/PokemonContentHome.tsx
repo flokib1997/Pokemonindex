@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemSecondaryAction,
   ListItemText,
+  Typography,
 } from "@material-ui/core";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { getAllPokemon } from "../../services/PokemonApi";
@@ -40,29 +41,45 @@ const PokemonContentHome = () => {
 
   return (
     <Grid container direction="column">
-      <Card className={classes.cardContainer}>
-        <List>
-          {pokemons.map((pokemon) => {
-            return (
-              <ListItem key={pokemon.name}>
-                <ListItemText primary={pokemon.name} />
-                <ListItemSecondaryAction>
-                  <Button
-                    variant="text"
-                    color="primary"
-                    size="medium"
-                    href={"/pokemon/" + pokemon.name}
-                    className={classes.button}
-                    endIcon={<ArrowForwardIosIcon />}
-                  >
-                    More
-                  </Button>
-                </ListItemSecondaryAction>
-              </ListItem>
-            );
-          })}
-        </List>
-      </Card>
+      <Grid item xs={12}>
+        <Card
+          className={`${classes.cardContainer} ${classes.headingContainer}`}
+        >
+          <Typography
+            align="left"
+            data-testid="homeHeading"
+            variant="h4"
+            component="h1"
+          >
+            Overview
+          </Typography>
+        </Card>
+      </Grid>
+      <Grid item xs={12}>
+        <Card className={classes.cardContainer}>
+          <List>
+            {pokemons.map((pokemon) => {
+              return (
+                <ListItem key={pokemon.name}>
+                  <ListItemText primary={pokemon.name} />
+                  <ListItemSecondaryAction>
+                    <Button
+                      variant="text"
+                      color="primary"
+                      size="medium"
+                      href={"/pokemon/" + pokemon.name}
+                      className={classes.button}
+                      endIcon={<ArrowForwardIosIcon />}
+                    >
+                      More
+                    </Button>
+                  </ListItemSecondaryAction>
+                </ListItem>
+              );
+            })}
+          </List>
+        </Card>
+      </Grid>
       <Pagination
         count={pageCount}
         onChange={handleChange}
