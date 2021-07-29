@@ -18,7 +18,7 @@ const PokemonInformation = (props: any) => {
         color="textSecondary"
         component="p"
       >
-        {props.value}
+        {props.value === "" ? "-" : props.value}
       </Typography>
     </>
   );
