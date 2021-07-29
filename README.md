@@ -2,6 +2,14 @@
 
 This project represents an index for all available Pokemon.
 
+## Technologies utilized
+
+This project was build with React.
+
+Styling: Material UI
+Testing: React Testing Library
+API communication: Axios
+
 ## API utilized
 
 The information presented in this application is obtained from the PokeAPI (https://pokeapi.co/).
