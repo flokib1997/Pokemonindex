@@ -66,7 +66,7 @@ const PokemonContentDetail = (props: any) => {
   }, []);
 
   return (
-    <Grid container spacing={0}>
+    <Grid container spacing={!isLoading && !pokemon ? 2 : 0}>
       <Grid item xs={12}>
         {isLoading ? (
           <CircularProgress className={classes.progressBar} />
