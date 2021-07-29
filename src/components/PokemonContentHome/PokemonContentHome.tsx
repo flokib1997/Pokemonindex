@@ -19,8 +19,8 @@ const PokemonContentHome = () => {
   const classes = useStyles();
 
   let [pokemons, setPokemons] = useState<IPokemon[]>([]);
-  let [page, setPage] = useState(1);
-  let [pageCount, setPageCount] = useState(0);
+  let [page, setPage] = useState<number>(1);
+  let [pageCount, setPageCount] = useState<number>(0);
 
   useEffect(() => {
     getAllPokemon(page).then((data) => {

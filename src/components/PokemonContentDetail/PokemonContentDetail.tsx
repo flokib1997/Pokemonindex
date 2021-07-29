@@ -27,18 +27,22 @@ const PokemonContentDetail = (props: any) => {
   const classes = useStyles();
 
   let [pokemon, setPokemon] = useState<IPokemonDetail>();
-  let [isLoading, setIsLoading] = useState<Boolean>(true);
+  let [isLoading, setIsLoading] = useState<boolean>(true);
 
   let { name }: any = useParams();
 
   useEffect(() => {
     getPokemonByName(name)
       .then((data) => {
-        const abilities = data.abilities
+        const abilities: string = data.abilities
           .map((el: any) => el.ability.name)
           .join(", ");
-        const types = data.types.map((el: any) => el.type.name).join(", ");
-        const moves = data.moves.map((el: any) => el.move.name).join(", ");
+        const types: string = data.types
+          .map((el: any) => el.type.name)
+          .join(", ");
+        const moves: string = data.moves
+          .map((el: any) => el.move.name)
+          .join(", ");
         const stats = data.stats.map((el: any) => {
           return { name: el.stat.name, value: el.base_stat };
         });
