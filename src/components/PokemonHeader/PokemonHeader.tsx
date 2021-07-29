@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/Home";
 import { useStyles } from "./PokemonHeader.style";
+import { Link } from "react-router-dom";
 
 const PokemonHeader = () => {
   const classes = useStyles();
@@ -17,8 +18,9 @@ const PokemonHeader = () => {
             edge="start"
             className={classes.menuButton}
             color="primary"
-            aria-label="menu"
-            href="/"
+            aria-label="homebutton"
+            component={Link}
+            to="/"
           >
             <HomeIcon />
           </IconButton>

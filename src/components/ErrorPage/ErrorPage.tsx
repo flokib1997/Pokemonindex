@@ -2,6 +2,7 @@ import { Button, Grid } from "@material-ui/core";
 import React from "react";
 import NotFound from "../NotFound/NotFound";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => (
   <Grid container spacing={2}>
@@ -13,7 +14,8 @@ const ErrorPage = () => (
         variant="text"
         color="primary"
         size="medium"
-        href="/"
+        component={Link}
+        to="/"
         startIcon={<ArrowBackIosIcon />}
       >
         Back

@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { IPokemonDetail } from "../../interfaces/PokemonInterfaceDetail";
 import {
   getEvolutionsBySpecies,
@@ -133,7 +133,8 @@ const PokemonContentDetail = (props: any) => {
           color="primary"
           className={classes.button}
           size="medium"
-          href="/"
+          component={Link}
+          to="/"
           startIcon={<ArrowBackIosIcon />}
         >
           Back

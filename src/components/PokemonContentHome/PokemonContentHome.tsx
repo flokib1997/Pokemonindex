@@ -14,6 +14,7 @@ import { getAllPokemon } from "../../services/PokemonApi";
 import { IPokemon } from "../../interfaces/PokemonInterface";
 import Pagination from "@material-ui/lab/Pagination";
 import { useStyles } from "./PokemonContentHome.style";
+import { Link } from "react-router-dom";
 
 const PokemonContentHome = () => {
   const classes = useStyles();
@@ -62,7 +63,8 @@ const PokemonContentHome = () => {
                       variant="text"
                       color="primary"
                       size="medium"
-                      href={"/pokemon/" + pokemon.name}
+                      component={Link}
+                      to={"/pokemon/" + pokemon.name}
                       className={classes.button}
                       endIcon={<ArrowForwardIosIcon />}
                     >
