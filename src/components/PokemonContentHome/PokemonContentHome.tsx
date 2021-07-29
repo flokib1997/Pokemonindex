@@ -31,7 +31,7 @@ const PokemonContentHome = () => {
   }, []);
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    let page: number = value;
+    const page: number = value;
     setPage(page);
     getAllPokemon(page).then((data) => {
       setPokemons([...data.results]);
