@@ -6,7 +6,7 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 const ErrorPage = () => (
   <Grid container spacing={2}>
     <Grid item xs={12}>
-      <NotFound heading="404" explanation="This page does not exist" />
+      <NotFound heading="404" explanation="This page does not exist." />
     </Grid>
     <Grid item xs={12}>
       <Button
